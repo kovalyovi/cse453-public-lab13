@@ -17,7 +17,9 @@ import cipher
 # GET REPORT
 # Generates the report for the selected cipher.
 #############################################################
-def get_report(cipher):
+
+
+def get_report(cipher: cipher.Cipher):
     # get the text
     plaintext = input("Please enter the text: ")
     if plaintext == "":
@@ -33,24 +35,24 @@ def get_report(cipher):
     decrypted = cipher.decrypt(encrypted, password)
 
     print("==================================="
-            "===================================\n"
-            "Cipher Name:    "
-            f"{cipher.get_cipher_name()}\n" \
-            "Student Name:   "
-            f"{cipher.get_author()}\n" \
-            "==================================="
-            "===================================\n"
-            "Citation:\n"
-            f"{cipher.get_cipher_citation()}\n"
-            "==================================="
-            "===================================\n"
-            f"Plain text:    {plaintext}\n" \
-            f"Cipher text:   {encrypted}\n" \
-            f"Decipher text: {decrypted}\n" \
-            "==================================="
-            "===================================\n"
-            "Pseudocode:\n"
-            f"{cipher.get_pseudocode()}")
+          "===================================\n"
+          "Cipher Name:    "
+          f"{cipher.get_cipher_name()}\n"
+          "Student Name:   "
+          f"{cipher.get_author()}\n"
+          "==================================="
+          "===================================\n"
+          "Citation:\n"
+          f"{cipher.get_cipher_citation()}\n"
+          "==================================="
+          "===================================\n"
+          f"Plain text:    {plaintext}\n"
+          f"Cipher text:   {encrypted}\n"
+          f"Decipher text: {decrypted}\n"
+          "==================================="
+          "===================================\n"
+          "Pseudocode:\n"
+          f"{cipher.get_pseudocode()}")
 
 
 #####################################################################
@@ -59,7 +61,7 @@ def get_report(cipher):
 #####################################################################
 def main():
 
-    the_cipher = example.Example() # TODO: replace with your cipher class
+    the_cipher = cipher.Cipher()
 
     get_report(the_cipher)  # generate the report
 
